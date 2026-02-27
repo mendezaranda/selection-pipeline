@@ -1,4 +1,4 @@
-# Selection / OrthoFinder → BPP / PAML / HyPhy pipeline (SLURM-ready)
+# Selection / OrthoFinder → BPP / PAML / HyPhy pipeline (SLURM)
 
 This repo packages the scripts and conventions from our chat into a reproducible, versioned workflow.
 
