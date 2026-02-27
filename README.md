@@ -21,18 +21,7 @@ All protein and CDS headers must be prefixed as:
 
 This is required because later stages extract CDS by matching OG member IDs against `ALL.primary.cds.fa`.
 
-2) Avoid fragile interactive shell code in batch jobs
-
-If your `~/.bashrc` prints quota or runs commands that can fail under `set -e`, guard it:
-
-```bash
-# in ~/.bashrc
-if [[ $- == *i* ]]; then
-  # interactive-only stuff
-fi
-```
-
-3) Avoid shared-file locks on parallel filesystems
+2) Avoid shared-file locks on parallel filesystems
 
 The BPP builder writes one status TSV per array task and merges later; do not use `flock` on shared files.
 
