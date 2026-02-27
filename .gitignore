@@ -1,0 +1,23 @@
+# outputs
+out/
+results/
+logs/
+*.log
+*.out
+*.err
+
+# large fasta/alignment data
+*.fa
+*.fasta
+*.faa
+*.fna
+*.cds
+*.phy
+
+# conda / snakemake
+.snakemake/
+.conda/
+
+# editor
+.vscode/
+.DS_Store

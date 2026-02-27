@@ -1,0 +1,15 @@
+# Minimal Snakemake skeleton.
+# Intentionally thin: it calls your existing scripts. Extend as needed.
+
+configfile: "../configs/config.example.yaml"
+
+rule all:
+    input:
+        # placeholder: require you to define your own final targets
+        "../docs/PIPELINE_OK"
+
+rule pipeline_ok:
+    output:
+        "../docs/PIPELINE_OK"
+    shell:
+        "echo 'Wire targets in workflow/Snakefile' > {output}"

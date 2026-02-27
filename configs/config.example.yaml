@@ -1,0 +1,33 @@
+# Example run configuration
+run_name: 2026-02-10_run01
+
+# Where per-species proteomes (for OrthoFinder) live
+proteomes_dir: /fast/AG_Lewin/dmendez/selection_pipeline/2026-02-10_run01/01b_proteomes
+
+# Where per-species CDS FASTAs live
+cds_dir: /fast/AG_Lewin/dmendez/selection_pipeline/2026-02-10_run01/02_cds
+
+# OrthoFinder results
+orthofinder_results_dir: /fast/AG_Lewin/dmendez/selection_pipeline/2026-02-10_run01/03b_orthofinder/out/Results_Feb12
+
+# BPP build outputs
+bpp_outdir: /fast/AG_Lewin/dmendez/selection_pipeline/2026-02-10_run01/08_bpp
+
+# Thresholds
+min_taxa: 10
+
+# Filters (start permissive for maximal yield)
+filter_stops: 0
+filter_frame: 0
+trimal: 1
+
+# Species inputs (illustrative)
+# You can keep transcriptome vs genome species separate if needed.
+species:
+  transcriptomes:
+    - HelKap
+    - HetGla
+  genomes_mikado:
+    - BatSui
+  genomes_ncbi:
+    - MusMus
