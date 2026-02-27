@@ -3,7 +3,7 @@
 This repo packages the scripts and conventions from our chat into a reproducible, versioned workflow.
 
 It’s designed for mixed inputs per species:
-- genomes (Mikado / NCBI style GFF3 + genome FASTA)
+- genomes (in-house annotation (Mikado) / NCBI style GFF3 + genome FASTA)
 - transcriptomes (Trinity assemblies + curated transcript FASTA)
 
 and produces:
@@ -11,7 +11,7 @@ and produces:
 - OrthoFinder runs + post-run header normalization
 - per-OG nucleotide and codon alignments suitable for BPP / ASTRAL / PAML / HyPhy (aBSREL)
 
-## Non-negotiable conventions
+## Notice
 
 1) Consistent IDs everywhere
 
@@ -108,14 +108,3 @@ bash scripts/og_to_codon_paml_hyphy.sh OG0000001.fa ALL.primary.cds.fa outdir 16
 ## Configuration
 
 Start from `configs/config.example.yaml` and adapt paths to your run.
-
-## Notes on hardcoded paths
-
-Some scripts currently include lab-specific absolute paths (e.g. `/fast/...`, `/home/dmendez/...`).
-Before publishing or sharing broadly:
-- replace these with config variables or CLI arguments
-- keep sbatch templates in `slurm/` as examples, not required defaults
-
-## License
-
-Add a LICENSE before publishing publicly.
