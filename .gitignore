@@ -21,3 +21,10 @@ logs/
 # editor
 .vscode/
 .DS_Store
+
+# local, cluster-specific config (copy configs/env.example.sh -> configs/env.sh)
+configs/env.sh
+
+# python bytecode
+__pycache__/
+*.pyc
